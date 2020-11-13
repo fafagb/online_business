@@ -1,0 +1,9 @@
+D:\github\online_business\online_business_api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\github\online_business\online_business_api\bin\Debug\netcoreapp3.1\appsettings.json
+D:\github\online_business\online_business_api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\online_business_api.csprojAssemblyReference.cache
+D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\online_business_api.AssemblyInfoInputs.cache
+D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\online_business_api.AssemblyInfo.cs
+D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\online_business_api.RazorTargetAssemblyInfo.cache
+D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\staticwebassets\online_business_api.StaticWebAssets.Manifest.cache
+D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\staticwebassets\online_business_api.StaticWebAssets.xml
