@@ -7,3 +7,4 @@ D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\online_bus
 D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\online_business_api.RazorTargetAssemblyInfo.cache
 D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\staticwebassets\online_business_api.StaticWebAssets.Manifest.cache
 D:\github\online_business\online_business_api\obj\Debug\netcoreapp3.1\staticwebassets\online_business_api.StaticWebAssets.xml
+D:\github\online_business\online_business_api\bin\Debug\netcoreapp3.1\online_business_api.exe
