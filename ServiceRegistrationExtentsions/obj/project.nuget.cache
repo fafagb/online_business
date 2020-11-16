@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4MH8vOjAJe0Me8zJ0o8z2d+vdA6wlt/9lcxbga9fXFzQnAJfhVY7bllQ/AQ++0ve6Th8vFEFl+fs/0Mk9wXQlQ==",
+  "success": true,
+  "projectFilePath": "D:\\github\\online_business\\ServiceRegistrationExtentsions\\ServiceRegistrationExtentsions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ruiyi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ruiyi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

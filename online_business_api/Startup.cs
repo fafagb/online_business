@@ -11,7 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using online_business_api.Helper;
-using online_business_api.ServiceRegistrationExtentsions;
+
+using ServiceRegistrationExtentsions;
 
 namespace online_business_api
 {
