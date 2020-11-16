@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using online_business_api.Helper;
+using online_business_api.ServiceRegistrationExtentsions;
 
 namespace online_business_api
 {
@@ -25,14 +27,18 @@ namespace online_business_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            SqlHelper.ConStr = Configuration.GetSection("ConStr").Value;
+            services.AddCors(o => o.AddPolicy("any", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             services.AddControllers();
-          
+
+            services.AddConsul();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -43,6 +49,9 @@ namespace online_business_api
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("any");
+
+            app.UseConsul();
 
             app.UseEndpoints(endpoints =>
             {

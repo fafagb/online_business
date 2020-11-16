@@ -9,7 +9,7 @@
       <ul>
         <!-- 属性前面加：就可以直接使用vue变量 -->
         <li v-for="product in productList" :key="product.id"> 
-          <img :src="product.url" alt="" />
+          <img :src="product.productImageUrl" alt="" />
           <p class="p-price">&yen;{{product.price}}</p>
           <p>{{product.productName}}</p>
         </li>
@@ -24,16 +24,21 @@ export default {
 
     return{
 
-      productlist:[]
+      productList:[]  //赋值未空数组，productList就是数组变量   
     };
   },
-  mounted(){},
+  mounted(){
+
+    this.getProductList();
+  },
   methods:{
     getProductList:function(){
-      var thisView=this.productlist;
-      this.$http.get("/api/Products/GetProductList").then(function(res){
+     // var thisView=this.productList;
+     var thisView=this;
+      this.$http.get("https://localhost:44389/api/Products/GetProducts").then(function(res){
 
-        thisView=res.data;//如果用jequrey的话：1res就是返回的数据。2这里this是jequrey对象，但我们这里用的是axios，这里的this是个null，所以要在外面接受productlist变量，不能直接在这里this.productlist-res.data
+      //  thisView=res.data;//如果用jequrey的话：1res就是返回的数据。2这里this是jequrey对象，但我们这里用的是axios，这里的this是个null，所以要在外面接受productlist变量，不能直接在这里this.productlist-res.data
+      thisView.productList=res.data;  //后端返回的是一个List对象，返回到前端，前端会自动转换成json数组，所以我们这里就用数组变量接收
       });
 
     }
