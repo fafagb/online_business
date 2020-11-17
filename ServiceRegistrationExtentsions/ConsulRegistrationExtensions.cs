@@ -18,6 +18,7 @@ namespace ServiceRegistrationExtentsions
     {
         public static void AddConsul(this IServiceCollection service)
         {
+         
             // 读取服务配置文件
             var config = new ConfigurationBuilder().AddJsonFile("service.config.json").Build();
             service.Configure<ConsulServiceOptions>(config);
