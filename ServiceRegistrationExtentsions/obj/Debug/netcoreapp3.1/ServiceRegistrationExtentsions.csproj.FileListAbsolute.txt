@@ -6,3 +6,4 @@ D:\github\online_business\ServiceRegistrationExtentsions\bin\Debug\netcoreapp3.1
 D:\github\online_business\ServiceRegistrationExtentsions\bin\Debug\netcoreapp3.1\ServiceRegistrationExtentsions.pdb
 D:\github\online_business\ServiceRegistrationExtentsions\obj\Debug\netcoreapp3.1\ServiceRegistrationExtentsions.dll
 D:\github\online_business\ServiceRegistrationExtentsions\obj\Debug\netcoreapp3.1\ServiceRegistrationExtentsions.pdb
+D:\github\online_business\ServiceRegistrationExtentsions\obj\Debug\netcoreapp3.1\ServiceRegistrationExtentsions.csprojAssemblyReference.cache

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using online_business_api.Helper;
 
 using ServiceRegistrationExtentsions;
@@ -31,13 +32,13 @@ namespace online_business_api
             SqlHelper.ConStr = Configuration.GetSection("ConStr").Value;
             services.AddCors(o => o.AddPolicy("any", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             services.AddControllers();
-
+            services.AddHealthChecks();
             services.AddConsul();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IOptions<ConsulServiceOptions> serviceOptions)
         {
 
             if (env.IsDevelopment())
@@ -45,14 +46,16 @@ namespace online_business_api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            app.UseHealthChecks(serviceOptions.Value.HealthCheck);
+            app.UseConsul();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
             app.UseCors("any");
 
-            app.UseConsul();
+            
 
             app.UseEndpoints(endpoints =>
             {
