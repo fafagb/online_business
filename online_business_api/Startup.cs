@@ -48,7 +48,7 @@ namespace online_business_api
 
             app.UseHealthChecks(serviceOptions.Value.HealthCheck);
             app.UseConsul();
-            // app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
